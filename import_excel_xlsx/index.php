@@ -48,7 +48,7 @@ if (isset($_POST['submit'])) {
 <html lang="en">
 
 <head>
-    <title>Import Xls Sheet</title>
+    <title>Import Xlsx Sheet</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
@@ -61,7 +61,7 @@ if (isset($_POST['submit'])) {
 
         <div class="card mt-2 mb-2">
             <div class="card-header text-center">
-                <h4>Import xls data in database</h4>
+                <h4>Import xlsx data in database</h4>
                 <form method="post" enctype="multipart/form-data">
                     <input type="file" name="doc" />
                     <input type="submit" name="submit" />
