@@ -5,10 +5,7 @@ $res = mysqli_query($con,"select * from xls_sheet");
 
 if(mysqli_num_rows($res)>0){
 
-    //pdf style format by kaswsar khan start
-            // $html = '<style>.table{background-color:red;}</style> <table class="table">';
-    //pdf style format by kaswsar khan start
-    $html ='<table>';
+    $html =' <style>.table{}</style> <table class="table">';
 
         $html.=     '<tr><td>ID</td><td>Sl</td><td>Name</td><td>Category</td><td>Position</td><td>Address</td></tr>';
 while($row=mysqli_fetch_assoc($res)){

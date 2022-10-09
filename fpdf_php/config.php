@@ -1,10 +1,10 @@
 <?php
 
-$mysqli = new mysqli("localhost","my_user","my_password","demo_excel");
+$con = mysqli_connect("localhost","root","","demo_excel");
 
 // Check connection
-if ($mysqli -> connect_errno) {
-  echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
+if (mysqli_connect_errno()) {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
   exit();
 }
 

@@ -20,14 +20,15 @@ if (isset($_POST['submit'])) {
             $getHighestRow =  $sheet->getHighestRow();
 
             for ($i = 0; $i <= $getHighestRow; $i++) {
-                $sl = $sheet->getCellByColumnAndRow(0, $i)->getValue();
-                $name = $sheet->getCellByColumnAndRow(1, $i)->getValue();
-                $category = $sheet->getCellByColumnAndRow(2, $i)->getValue();
-                $position = $sheet->getCellByColumnAndRow(3, $i)->getValue();
-                $address = $sheet->getCellByColumnAndRow(4, $i)->getValue();
-                if ($sl != '') {
-                    mysqli_query($con, "insert into xls_sheet(sl,name,category,position,address) values('$sl','$name','$category','$position','$address')");
-                }
+                // $sl = $sheet->getCellByColumnAndRow(0, $i)->getValue();
+                $name = $sheet->getCellByColumnAndRow(0, $i)->getValue();
+                $compay_name = $sheet->getCellByColumnAndRow(1, $i)->getValue();
+                // $category = $sheet->getCellByColumnAndRow(3, $i)->getValue();
+                $position = $sheet->getCellByColumnAndRow(2, $i)->getValue();
+                $address = $sheet->getCellByColumnAndRow(3, $i)->getValue();
+                //  if ($name != '') {
+                    mysqli_query($con, "insert into xls_sheet(name,compay_name,position,address) values('$name','$compay_name','$position','$address')");
+                //  }
             }
         }
     } else {
